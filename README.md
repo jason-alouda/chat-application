@@ -1,4 +1,4 @@
-# Nodejs WebSocket
+# chat application
 
 This is the template for a simple chat application. It is built using a Node.js socket made up of API gateway component with WEBSOCKET protocol and 3 SCF (Serverless Cloud Functions) functions, namely a register function, transport function and clean up function. It is also connected to a MongoDB database which is needed to store current connections to the websocket so that messages can be transmitted to all clients. A demo can be found [here](http://chat-bucket-1302554812.cos-website.ap-guangzhou.myqcloud.com/).
 
