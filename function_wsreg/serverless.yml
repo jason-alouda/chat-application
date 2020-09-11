@@ -1,0 +1,19 @@
+component: scf
+name: wsconnect
+org: tencent
+app: chat-app
+stage: dev
+
+inputs:
+  name: ${name}-${stage}
+  src: ./
+  runtime: Nodejs10.15
+  region: ${env:REGION}
+  handler: connect.main_handler
+  timeout: 30
+  environment:
+    variables:
+      SecretId: ${env:TENCENT_SECRET_ID}
+      SecretKey: ${env:TENCENT_SECRET_KEY}
+      MONGODB_URL: ${env:MONGODB_URL}
+      #MongoId: ${output:${stage}:${app}:mongodb-chat.EnvId}

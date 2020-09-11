@@ -1,0 +1,25 @@
+component: scf
+name: wstrans
+org: tencent
+app: chat-app
+stage: dev
+
+inputs:
+  name: ${name}-${stage}
+  src: ./
+  region: ${env:REGION}
+  handler: transmit.main_handler
+  runtime: Nodejs10.15
+  timeout: 30
+  environment:
+    variables:
+      apiid: api-pgrw7a14
+      SecretId: ${env:TENCENT_SECRET_ID}
+      SecretKey: ${env:TENCENT_SECRET_KEY}
+      MONGODB_URL: ${env:MONGODB_URL}
+      #MongoId: ${output:${stage}:${app}:mongodb-chat.EnvId}
+  apigatewayConf:
+    enableCORS: true
+    protocols:
+      - http
+      - https

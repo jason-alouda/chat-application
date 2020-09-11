@@ -1,0 +1,17 @@
+name: chat-app
+author: Jason Ah Chuen (Tencent Intern)
+org: tencent
+description: Build a chat application using nodejs websocket and mongoDB database.
+keywords: tencent, serverless, scf, apigw, websocket, nodejs, mongodb
+repo: https://github.com/jason-alouda/chat-app
+readme: https://github.com/jason-alouda/chat-app/blob/master/README.md
+license: MIT
+src:
+  src: ./
+  exclude:
+    - .env
+    - '.git/**'
+    - .gitignore
+    - '**/node_modules'
+    - '**/package-lock.json'
+    - serverless.yml
